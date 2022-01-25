@@ -32,9 +32,9 @@
 
             <div>
                 <input type="radio" value="1" asp-for="TipoFornecedor"
-                       checked="@(Model.TipoFornecedor == 1)" />
+                       checked="@(Model.TipoFornecedor == 1)" /> Pessoa Física
                 <input type="radio" value="1" asp-for="TipoFornecedor"
-                       checked="@(Model.TipoFornecedor == 2)" />
+                       checked="@(Model.TipoFornecedor == 2)" /> Pessoa Jurídica
             </div>
             <div>
                 &nbsp;
@@ -54,7 +54,7 @@
     </div>
 </form>
 
-<div>
+<div id="EnderecoTarget">
     <partial name="_DetalhesEndereco" />
 </div>
 
@@ -64,7 +64,24 @@
     <partial name="../Produtos/_ListaProdutos" model="@Model.Produtos" />
 </div>
 
+<div id="myModal" class="modal fade in">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div id="myModalContent">
+
+            </div>
+        </div>
+    </div>
+</div>
+
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        $(document).ready(function () {
+            AjaxModal();
+        });
+    </script>
 }
+

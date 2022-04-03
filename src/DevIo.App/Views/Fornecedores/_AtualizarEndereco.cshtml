@@ -12,7 +12,7 @@
     </button>
 </div>
 
-<form asp-action="AtualizarEndereco">
+<form enctype="multipart/form-data" asp-action="AtualizarEndereco">
     <div class="modal-body">
         <input type="hidden" asp-for="Endereco.FornecedorId" />
         <input type="hidden" asp-for="Endereco.Id" />
@@ -28,3 +28,7 @@
 
     </div>
 </form>
+
+<script>
+    BuscaCep();
+</script>

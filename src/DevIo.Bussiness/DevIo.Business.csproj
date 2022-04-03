@@ -6,10 +6,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
+    <Compile Remove="Models\Validations\FornecedorValidation.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Notifications\" />
-    <Folder Include="Validations\" />
-    <Folder Include="Services\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Models\Validations\FornecedorValidation.cs" />
   </ItemGroup>
 
 </Project>

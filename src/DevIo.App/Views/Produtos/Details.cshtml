@@ -8,7 +8,8 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <img src="~/imagens/@Model.Imagem" alt="@Model.Imagem" style="width: 300px; height : 428px" />
+        <img src="~/imagens/@Model.Imagem" alt="@Model.Imagem" 
+             style="width: 300px; height : 428px; object-fit : cover" />
     </div>
     <div class="col-md-6">
         <dl>
@@ -51,8 +52,11 @@
         </dl>
 
         <div>
-            <a class="btn btn-dark" asp-action="Edit" asp-route-id="@Model.Id">Editar</a> |
-            <a class="btn btn-info" href="javascript:window.history.back();" asp-action="Index">Voltar</a>
+            <a class="btn btn-dark" 
+               asp-controller="Produtos"
+               asp-action="Edit" 
+               asp-route-id="@Model.Id">Editar</a> |
+            <a class="btn btn-info" href="javascript:window.history.back();">Voltar</a>
         </div>
 
     </div>
